@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace programacionexamennoviembre
 {
+    sjbckuwe
     public partial class Form1 : Form
     {
         string[] nombre = new string[100];
