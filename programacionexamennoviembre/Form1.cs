@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace programacionexamennoviembre
 {
-    sjbckuwe
+
     public partial class Form1 : Form
     {
-        string[] nombre = new string[100];
-        string[] apellido = new string[100];
-        string[] correo = new string[100];
-        
+        int pos = 0;
+        string[] nuevosnombres = new string[50];
+        string[] nuevosapellidos = new string[50];
+        string[] nuevoscorreos = new string[50];
+        string[] nuevaedad = new string[50];
+       
+
         public Form1()
         {
             InitializeComponent();
@@ -31,19 +34,23 @@ namespace programacionexamennoviembre
         {
             int edad_usuario;
 
-            for (int i = 0; i <= 100; i++)
+            for (int i = 0; i <= 50; i++)
             {
                 edad_usuario = System.Convert.ToInt32(txtedad.Text);
                 if (edad_usuario >= 18)
                 {
-                    LBLresultado.Text = "puede ingresar a la capacitacion...continue";
+                    LBLresultado.Text = "PUEDE INGRESAR A LA CAPACITACION...CONTINUE";
                 }
                 else if (edad_usuario >= 1 && edad_usuario < 18)
                 {
-                    LBLresultado.Text = "no puede ingresar a la capacitacion...";
+                    LBLresultado.Text = "NO PUEDE INGRESAR A LA CAPACITACION...";
                 }
                 txtnombre.Text = "";
-                txtedad.Text = "0";
+                txtedad.Text = "";
+                txtapellido.Text = "";
+                txtcorreo.Text = "";
+
+
             }
         }
 
@@ -56,14 +63,36 @@ namespace programacionexamennoviembre
         {
             Integrantes integrantesacargar = new Integrantes();
 
+            pos = pos + 1;
 
-            integrantesacargar.Nombre = txtnombre.Text;
-            integrantesacargar.Apellido = txtapellido.Text;
-            integrantesacargar.Correo = txtcorreo.Text;
-            integrantesacargar.edad = System.Convert.ToInt32(txtedad.Text);
+            //integrantesacargar.Nombre = txtnombre.Text;
+            //integrantesacargar.Apellido = txtapellido.Text;
+            //integrantesacargar.Correo = txtcorreo.Text;
+            //integrantesacargar.edad = System.Convert.ToInt32(txtedad.Text);
+            nuevosnombres[pos] = txtnombre.Text;
+            nuevosapellidos[pos] = txtapellido.Text;
+            nuevoscorreos[pos] = txtcorreo.Text;
+            nuevaedad[pos] = txtedad.Text;
 
-            integrantesacargar = null;
-            integrantesacargar = new Integrantes();
+
+
+
+
+        }
+
+        private void Blista_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Bborrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
