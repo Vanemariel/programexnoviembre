@@ -23,14 +23,14 @@ namespace programacionexamennoviembre.clases
             DT.Columns.Add("Correo");
             DT.Columns.Add("Edad");
 
-            LeerDT_Carpetaingresantes();
+            leerDT_Carpetaingresantes();
         }
 
-        public void leerDT_Carpetaintegrantes()
+        public void leerDT_Carpetaingresantes()
         {
-            if (System.IO.File.Exists("lista"))
+            if (System.IO.File.Exists("lista.xml"))
             {
-                DT.ReadXml("lista");
+                DT.ReadXml("lista.xml");
                 ultimoId = 0;
                 for (int i = 0; i < DT.Rows.Count; i++)
 
@@ -64,7 +64,7 @@ namespace programacionexamennoviembre.clases
                     DT.Rows[NumeroRegistroNuevo]["Correo"] = integrantes.Correo;
                     DT.Rows[NumeroRegistroNuevo]["edad"] = integrantes.edad.ToString();
 
-                    DT.WriteXml("Lista");
+                    DT.WriteXml("Lista.xml");
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace programacionexamennoviembre.clases
                             DT.Rows[fila]["Apellido"] = integrantes.Apellido;
                             DT.Rows[fila]["correo"] = integrantes.Correo;
                             DT.Rows[fila]["edad"] = integrantes.edad.ToString();
-                            DT.WriteXml("Lista.");
+                            DT.WriteXml("Lista.xml");
                             break;
                         }
                     }

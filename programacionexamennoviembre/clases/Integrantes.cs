@@ -19,7 +19,7 @@ namespace programacionexamennoviembre
         {
             bool respuesta = false;
 
-            if (edad > 18 && edad < 100)
+            if (edad > 18 && edad < 70)
             {
                 respuesta = true;
             }

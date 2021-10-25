@@ -51,7 +51,7 @@ namespace programacionexamennoviembre
             // 
             // Bpresione
             // 
-            this.Bpresione.Location = new System.Drawing.Point(1070, 165);
+            this.Bpresione.Location = new System.Drawing.Point(1069, 139);
             this.Bpresione.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bpresione.Name = "Bpresione";
             this.Bpresione.Size = new System.Drawing.Size(124, 35);
@@ -62,7 +62,7 @@ namespace programacionexamennoviembre
             // 
             // Bcargar
             // 
-            this.Bcargar.Location = new System.Drawing.Point(934, 265);
+            this.Bcargar.Location = new System.Drawing.Point(13, 217);
             this.Bcargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bcargar.Name = "Bcargar";
             this.Bcargar.Size = new System.Drawing.Size(124, 35);
@@ -73,7 +73,7 @@ namespace programacionexamennoviembre
             // 
             // Blista
             // 
-            this.Blista.Location = new System.Drawing.Point(1156, 265);
+            this.Blista.Location = new System.Drawing.Point(13, 350);
             this.Blista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Blista.Name = "Blista";
             this.Blista.Size = new System.Drawing.Size(124, 35);
@@ -84,7 +84,7 @@ namespace programacionexamennoviembre
             // 
             // Bborrar
             // 
-            this.Bborrar.Location = new System.Drawing.Point(1035, 368);
+            this.Bborrar.Location = new System.Drawing.Point(13, 293);
             this.Bborrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bborrar.Name = "Bborrar";
             this.Bborrar.Size = new System.Drawing.Size(124, 35);
@@ -203,10 +203,11 @@ namespace programacionexamennoviembre
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(709, 195);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(618, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(560, 270);
             this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Form1
             // 

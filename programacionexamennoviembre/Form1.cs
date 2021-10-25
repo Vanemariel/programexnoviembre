@@ -1,4 +1,5 @@
-﻿using System;
+﻿using programacionexamennoviembre.clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,25 +35,27 @@ namespace programacionexamennoviembre
 
         private void Bpresione_Click(object sender, EventArgs e)
         {
-            int edad_usuario;
-
-            for (int i = 0; i <= 50; i++)
-            {
-                edad_usuario = System.Convert.ToInt32(txtedad.Text);
-                if (edad_usuario >= 18)
+            
+            int edad_usuario = System.Convert.ToInt32(txtedad.Text);
+            //for (int i = 0; i <= 50; i++)
+            //{
+                
+                if (edad_usuario < 18)
                 {
-                    LBLresultado.Text = "PUEDE INGRESAR A LA CAPACITACION...CONTINUE";
+                  
+                       LBLresultado.Text = "PUEDE INGRESAR A LA CAPACITACION...";
+                    
                 }
-                else if (edad_usuario >= 1 && edad_usuario < 18)
+                else if (edad_usuario>=1 && edad_usuario <18)
                 {
-                    LBLresultado.Text = "NO PUEDE INGRESAR A LA CAPACITACION...";
+                    LBLresultado.Text = "NO PUEDE INGRESAR A LA CAPACITACION...CONTINUE";
                 }
                 txtnombre.Text = "";
                 txtedad.Text = "";
                 txtapellido.Text = "";
                 txtcorreo.Text = "";
 
-            }
+           // }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -84,24 +87,22 @@ namespace programacionexamennoviembre
                 txtedad.SelectAll();
                 lbllista.Text = "Ingresante Invalido";
             }
-            else
-            {
-                Limpiar();
-
-            }
-            Ingre = new Integrantes;
+            
+            Ingre = new Integrantes();
 
             
         }
 
         private void Blista_Click(object sender, EventArgs e)
         {
-            lbllista.Text = "lista:\r\n";
-            foreach (Integrantes item in Integrantes)
+        //    lbllista.Text = "lista:\r\n";
+        //    foreach (Integrantes item in Integrantes)
                 
-            {
-               lbllista.Text=lbllista.Text + item.Nombre + item.edad.ToString()+ item.Apellido + item.Correo 
-            }
+        //    {
+        //        lbllista.Text = lbllista.Text + item.Nombre + item.edad.ToString() + item.Apellido + item.Correo;
+        //    }
+
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -110,6 +111,11 @@ namespace programacionexamennoviembre
         }
 
         private void Bborrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
