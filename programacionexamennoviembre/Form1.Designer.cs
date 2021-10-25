@@ -45,6 +45,8 @@ namespace programacionexamennoviembre
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txtedad = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Bpresione
@@ -105,7 +107,7 @@ namespace programacionexamennoviembre
             // 
             this.lblnombre.AutoSize = true;
             this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnombre.Location = new System.Drawing.Point(58, 115);
+            this.lblnombre.Location = new System.Drawing.Point(58, 83);
             this.lblnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(85, 20);
@@ -116,7 +118,7 @@ namespace programacionexamennoviembre
             // 
             this.lblapellido.AutoSize = true;
             this.lblapellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblapellido.Location = new System.Drawing.Point(311, 115);
+            this.lblapellido.Location = new System.Drawing.Point(311, 83);
             this.lblapellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblapellido.Name = "lblapellido";
             this.lblapellido.Size = new System.Drawing.Size(96, 20);
@@ -127,7 +129,7 @@ namespace programacionexamennoviembre
             // 
             this.lbledad.AutoSize = true;
             this.lbledad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbledad.Location = new System.Drawing.Point(516, 115);
+            this.lbledad.Location = new System.Drawing.Point(516, 83);
             this.lbledad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbledad.Name = "lbledad";
             this.lbledad.Size = new System.Drawing.Size(59, 20);
@@ -138,7 +140,7 @@ namespace programacionexamennoviembre
             // 
             this.lblcorreo.AutoSize = true;
             this.lblcorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcorreo.Location = new System.Drawing.Point(757, 115);
+            this.lblcorreo.Location = new System.Drawing.Point(763, 83);
             this.lblcorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblcorreo.Name = "lblcorreo";
             this.lblcorreo.Size = new System.Drawing.Size(51, 20);
@@ -157,7 +159,7 @@ namespace programacionexamennoviembre
             // lbllista
             // 
             this.lbllista.AutoSize = true;
-            this.lbllista.Location = new System.Drawing.Point(58, 357);
+            this.lbllista.Location = new System.Drawing.Point(45, 500);
             this.lbllista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbllista.Name = "lbllista";
             this.lbllista.Size = new System.Drawing.Size(59, 20);
@@ -166,7 +168,7 @@ namespace programacionexamennoviembre
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(62, 174);
+            this.txtnombre.Location = new System.Drawing.Point(22, 139);
             this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(164, 26);
@@ -174,7 +176,7 @@ namespace programacionexamennoviembre
             // 
             // txtapellido
             // 
-            this.txtapellido.Location = new System.Drawing.Point(290, 174);
+            this.txtapellido.Location = new System.Drawing.Point(282, 139);
             this.txtapellido.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtapellido.Name = "txtapellido";
             this.txtapellido.Size = new System.Drawing.Size(164, 26);
@@ -183,7 +185,7 @@ namespace programacionexamennoviembre
             // 
             // txtedad
             // 
-            this.txtedad.Location = new System.Drawing.Point(500, 174);
+            this.txtedad.Location = new System.Drawing.Point(487, 139);
             this.txtedad.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtedad.Name = "txtedad";
             this.txtedad.Size = new System.Drawing.Size(164, 26);
@@ -191,12 +193,20 @@ namespace programacionexamennoviembre
             // 
             // txtcorreo
             // 
-            this.txtcorreo.Location = new System.Drawing.Point(729, 174);
+            this.txtcorreo.Location = new System.Drawing.Point(693, 139);
             this.txtcorreo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(164, 26);
             this.txtcorreo.TabIndex = 14;
             this.txtcorreo.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(33, 192);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(618, 270);
+            this.dataGridView1.TabIndex = 15;
             // 
             // Form1
             // 
@@ -204,6 +214,7 @@ namespace programacionexamennoviembre
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1333, 692);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.txtedad);
             this.Controls.Add(this.txtapellido);
@@ -224,6 +235,7 @@ namespace programacionexamennoviembre
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,6 +258,7 @@ namespace programacionexamennoviembre
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtedad;
         private System.Windows.Forms.TextBox txtcorreo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

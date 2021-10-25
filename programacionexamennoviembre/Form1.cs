@@ -13,11 +13,13 @@ namespace programacionexamennoviembre
 
     public partial class Form1 : Form
     {
-        int pos = 0;
-        string[] nuevosnombres = new string[50];
-        string[] nuevosapellidos = new string[50];
-        string[] nuevoscorreos = new string[50];
-        string[] nuevaedad = new string[50];
+        Integrantes Ingre = new Integrantes();
+        public Personascargadas listas { get; set; } = new Personascargadas();
+        //int pos = 0;
+        //string[] nuevosnombres = new string[50];
+        //string[] nuevosapellidos = new string[50];
+        //string[] nuevoscorreos = new string[50];
+        //string[] nuevaedad = new string[50];
        
 
         public Form1()
@@ -50,7 +52,6 @@ namespace programacionexamennoviembre
                 txtapellido.Text = "";
                 txtcorreo.Text = "";
 
-
             }
         }
 
@@ -61,28 +62,46 @@ namespace programacionexamennoviembre
 
         private void Bcargar_Click(object sender, EventArgs e)
         {
-            Integrantes integrantesacargar = new Integrantes();
+            //Integrantes integrantesacargar = new Integrantes();
 
-            pos = pos + 1;
-
+            //pos = pos + 1;
             //integrantesacargar.Nombre = txtnombre.Text;
             //integrantesacargar.Apellido = txtapellido.Text;
             //integrantesacargar.Correo = txtcorreo.Text;
             //integrantesacargar.edad = System.Convert.ToInt32(txtedad.Text);
-            nuevosnombres[pos] = txtnombre.Text;
-            nuevosapellidos[pos] = txtapellido.Text;
-            nuevoscorreos[pos] = txtcorreo.Text;
-            nuevaedad[pos] = txtedad.Text;
+            //nuevosnombres[pos] = txtnombre.Text;
+            //nuevosapellidos[pos] = txtapellido.Text;
+            //nuevoscorreos[pos] = txtcorreo.Text;
+            //nuevaedad[pos] = txtedad.Text;
+            Ingre.Nombre = txtnombre.Text;
+            Ingre.Apellido = txtapellido.Text;
+            Ingre.Correo = txtcorreo.Text;
+            Ingre.edad = Convert.ToInt32(txtedad.Text);
 
+            if (!listas.UpdateIntegrantes(Ingre))
+            {
+                txtedad.Focus();
+                txtedad.SelectAll();
+                lbllista.Text = "Ingresante Invalido";
+            }
+            else
+            {
+                Limpiar();
 
+            }
+            Ingre = new Integrantes;
 
-
-
+            
         }
 
         private void Blista_Click(object sender, EventArgs e)
         {
-
+            lbllista.Text = "lista:\r\n";
+            foreach (Integrantes item in Integrantes)
+                
+            {
+               lbllista.Text=lbllista.Text + item.Nombre + item.edad.ToString()+ item.Apellido + item.Correo 
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -8,11 +8,23 @@ namespace programacionexamennoviembre
 {
     public class Integrantes
     {
+        public int id { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Correo { get; set; }
         public int edad { get; set; }
 
+
+        public bool Validar()
+        {
+            bool respuesta = false;
+
+            if (edad > 18 && edad < 100)
+            {
+                respuesta = true;
+            }
+            return respuesta;
+        }
     }
 
        
