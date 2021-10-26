@@ -40,7 +40,6 @@ namespace programacionexamennoviembre
             this.lbledad = new System.Windows.Forms.Label();
             this.lblcorreo = new System.Windows.Forms.Label();
             this.LBLresultado = new System.Windows.Forms.Label();
-            this.lbllista = new System.Windows.Forms.Label();
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txtedad = new System.Windows.Forms.TextBox();
@@ -62,7 +61,7 @@ namespace programacionexamennoviembre
             // 
             // Bcargar
             // 
-            this.Bcargar.Location = new System.Drawing.Point(13, 217);
+            this.Bcargar.Location = new System.Drawing.Point(1069, 201);
             this.Bcargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bcargar.Name = "Bcargar";
             this.Bcargar.Size = new System.Drawing.Size(124, 35);
@@ -73,7 +72,7 @@ namespace programacionexamennoviembre
             // 
             // Blista
             // 
-            this.Blista.Location = new System.Drawing.Point(13, 350);
+            this.Blista.Location = new System.Drawing.Point(13, 481);
             this.Blista.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Blista.Name = "Blista";
             this.Blista.Size = new System.Drawing.Size(124, 35);
@@ -84,7 +83,7 @@ namespace programacionexamennoviembre
             // 
             // Bborrar
             // 
-            this.Bborrar.Location = new System.Drawing.Point(13, 293);
+            this.Bborrar.Location = new System.Drawing.Point(1069, 272);
             this.Bborrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Bborrar.Name = "Bborrar";
             this.Bborrar.Size = new System.Drawing.Size(124, 35);
@@ -150,21 +149,11 @@ namespace programacionexamennoviembre
             // LBLresultado
             // 
             this.LBLresultado.AutoSize = true;
-            this.LBLresultado.Location = new System.Drawing.Point(311, 265);
+            this.LBLresultado.Location = new System.Drawing.Point(708, 216);
             this.LBLresultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLresultado.Name = "LBLresultado";
             this.LBLresultado.Size = new System.Drawing.Size(0, 20);
             this.LBLresultado.TabIndex = 9;
-            // 
-            // lbllista
-            // 
-            this.lbllista.AutoSize = true;
-            this.lbllista.Location = new System.Drawing.Point(45, 500);
-            this.lbllista.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbllista.Name = "lbllista";
-            this.lbllista.Size = new System.Drawing.Size(59, 20);
-            this.lbllista.TabIndex = 10;
-            this.lbllista.Text = "LISTA";
             // 
             // txtnombre
             // 
@@ -203,7 +192,7 @@ namespace programacionexamennoviembre
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(709, 195);
+            this.dataGridView1.Location = new System.Drawing.Point(-4, 173);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(560, 270);
             this.dataGridView1.TabIndex = 15;
@@ -220,7 +209,6 @@ namespace programacionexamennoviembre
             this.Controls.Add(this.txtedad);
             this.Controls.Add(this.txtapellido);
             this.Controls.Add(this.txtnombre);
-            this.Controls.Add(this.lbllista);
             this.Controls.Add(this.LBLresultado);
             this.Controls.Add(this.lblcorreo);
             this.Controls.Add(this.lbledad);
@@ -254,7 +242,6 @@ namespace programacionexamennoviembre
         private System.Windows.Forms.Label lbledad;
         private System.Windows.Forms.Label lblcorreo;
         private System.Windows.Forms.Label LBLresultado;
-        private System.Windows.Forms.Label lbllista;
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtedad;

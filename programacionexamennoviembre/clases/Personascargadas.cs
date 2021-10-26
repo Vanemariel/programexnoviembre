@@ -59,7 +59,7 @@ namespace programacionexamennoviembre.clases
                     int NumeroRegistroNuevo = DT.Rows.Count - 1;
 
                     DT.Rows[NumeroRegistroNuevo]["Id"] = integrantes.id.ToString();
-                    DT.Rows[NumeroRegistroNuevo]["Nombre"] = integrantes.Nombre;
+                    DT.Rows[NumeroRegistroNuevo]["Nombres"] = integrantes.Nombre;
                     DT.Rows[NumeroRegistroNuevo]["Apellido"] = integrantes.Apellido;
                     DT.Rows[NumeroRegistroNuevo]["Correo"] = integrantes.Correo;
                     DT.Rows[NumeroRegistroNuevo]["edad"] = integrantes.edad.ToString();

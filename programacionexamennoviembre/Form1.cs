@@ -26,6 +26,8 @@ namespace programacionexamennoviembre
         public Form1()
         {
             InitializeComponent();
+
+            dg.DataSource = listas.DT;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -37,25 +39,22 @@ namespace programacionexamennoviembre
         {
             
             int edad_usuario = System.Convert.ToInt32(txtedad.Text);
-            //for (int i = 0; i <= 50; i++)
-            //{
+            for (int i = 0; i <= 50; i++)
+            {
                 
-                if (edad_usuario < 18)
+                if (edad_usuario >= 18)
                 {
                   
                        LBLresultado.Text = "PUEDE INGRESAR A LA CAPACITACION...";
                     
                 }
-                else if (edad_usuario>=1 && edad_usuario <18)
+                else if (edad_usuario >=1 && edad_usuario <18)
                 {
                     LBLresultado.Text = "NO PUEDE INGRESAR A LA CAPACITACION...CONTINUE";
                 }
-                txtnombre.Text = "";
-                txtedad.Text = "";
-                txtapellido.Text = "";
-                txtcorreo.Text = "";
+                
 
-           // }
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -80,17 +79,22 @@ namespace programacionexamennoviembre
             Ingre.Apellido = txtapellido.Text;
             Ingre.Correo = txtcorreo.Text;
             Ingre.edad = Convert.ToInt32(txtedad.Text);
+            
+
 
             if (!listas.UpdateIntegrantes(Ingre))
             {
                 txtedad.Focus();
                 txtedad.SelectAll();
-                lbllista.Text = "Ingresante Invalido";
+                Blista.Text = "Ingresante Invalido";
             }
             
             Ingre = new Integrantes();
+            //txtnombre.Text = "";
+            //txtedad.Text = "";
+            //txtapellido.Text = "";
+            //txtcorreo.Text = "";
 
-            
         }
 
         private void Blista_Click(object sender, EventArgs e)
@@ -116,6 +120,11 @@ namespace programacionexamennoviembre
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void lbllista_Click(object sender, EventArgs e)
         {
 
         }
