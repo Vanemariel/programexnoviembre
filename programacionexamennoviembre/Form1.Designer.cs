@@ -33,7 +33,7 @@ namespace programacionexamennoviembre
             this.Bpresione = new System.Windows.Forms.Button();
             this.Bcargar = new System.Windows.Forms.Button();
             this.Blista = new System.Windows.Forms.Button();
-            this.Bborrar = new System.Windows.Forms.Button();
+            this.Bmodif = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblnombre = new System.Windows.Forms.Label();
             this.lblapellido = new System.Windows.Forms.Label();
@@ -44,8 +44,8 @@ namespace programacionexamennoviembre
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txtedad = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
             // Bpresione
@@ -81,16 +81,16 @@ namespace programacionexamennoviembre
             this.Blista.UseVisualStyleBackColor = true;
             this.Blista.Click += new System.EventHandler(this.Blista_Click);
             // 
-            // Bborrar
+            // Bmodif
             // 
-            this.Bborrar.Location = new System.Drawing.Point(1069, 272);
-            this.Bborrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Bborrar.Name = "Bborrar";
-            this.Bborrar.Size = new System.Drawing.Size(124, 35);
-            this.Bborrar.TabIndex = 3;
-            this.Bborrar.Text = "BORRAR";
-            this.Bborrar.UseVisualStyleBackColor = true;
-            this.Bborrar.Click += new System.EventHandler(this.Bborrar_Click);
+            this.Bmodif.Location = new System.Drawing.Point(1069, 272);
+            this.Bmodif.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Bmodif.Name = "Bmodif";
+            this.Bmodif.Size = new System.Drawing.Size(124, 35);
+            this.Bmodif.TabIndex = 3;
+            this.Bmodif.Text = "MODIFICAR";
+            this.Bmodif.UseVisualStyleBackColor = true;
+            this.Bmodif.Click += new System.EventHandler(this.Bborrar_Click);
             // 
             // label1
             // 
@@ -149,7 +149,7 @@ namespace programacionexamennoviembre
             // LBLresultado
             // 
             this.LBLresultado.AutoSize = true;
-            this.LBLresultado.Location = new System.Drawing.Point(708, 216);
+            this.LBLresultado.Location = new System.Drawing.Point(575, 216);
             this.LBLresultado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLresultado.Name = "LBLresultado";
             this.LBLresultado.Size = new System.Drawing.Size(0, 20);
@@ -189,14 +189,14 @@ namespace programacionexamennoviembre
             this.txtcorreo.TabIndex = 14;
             this.txtcorreo.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-4, 173);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 270);
-            this.dataGridView1.TabIndex = 15;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Location = new System.Drawing.Point(-4, 173);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(560, 270);
+            this.dgv.TabIndex = 15;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Form1
             // 
@@ -204,7 +204,7 @@ namespace programacionexamennoviembre
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1333, 692);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv);
             this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.txtedad);
             this.Controls.Add(this.txtapellido);
@@ -215,7 +215,7 @@ namespace programacionexamennoviembre
             this.Controls.Add(this.lblapellido);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Bborrar);
+            this.Controls.Add(this.Bmodif);
             this.Controls.Add(this.Blista);
             this.Controls.Add(this.Bcargar);
             this.Controls.Add(this.Bpresione);
@@ -224,7 +224,7 @@ namespace programacionexamennoviembre
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,7 +235,7 @@ namespace programacionexamennoviembre
         private System.Windows.Forms.Button Bpresione;
         private System.Windows.Forms.Button Bcargar;
         private System.Windows.Forms.Button Blista;
-        private System.Windows.Forms.Button Bborrar;
+        private System.Windows.Forms.Button Bmodif;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblnombre;
         private System.Windows.Forms.Label lblapellido;
@@ -246,7 +246,7 @@ namespace programacionexamennoviembre
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txtedad;
         private System.Windows.Forms.TextBox txtcorreo;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
     }
 }
 

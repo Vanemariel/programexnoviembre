@@ -27,7 +27,7 @@ namespace programacionexamennoviembre
         {
             InitializeComponent();
 
-            dg.DataSource = listas.DT;
+            dgv.DataSource = listas.DT;
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
@@ -116,8 +116,27 @@ namespace programacionexamennoviembre
 
         private void Bborrar_Click(object sender, EventArgs e)
         {
+            if (listas.DeleteIntegrantes(Ingre))
+            {
+                limpiar();
+            }
+            //else
+            //{
+            //    Blista.Text = "El registro" + Ingre.Nombre + "no puede borrarse";
+            //}
+            Ingre = new Integrantes();
+        }
+        private void limpiar()
+        {
+            txtnombre.Text = "";
+            txtapellido.Text = "";
+            txtcorreo.Text = ""; ;
+            txtedad.Text = "";
+
 
         }
+           
+
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

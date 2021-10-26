@@ -44,8 +44,8 @@ namespace programacionexamennoviembre.clases
                 }
             }
         }
-        public bool UpdateIntegrantes( Integrantes integrantes)
-        {     
+        public bool UpdateIntegrantes(Integrantes integrantes)
+        {
             bool respuesta = integrantes.Validar();
 
             if (respuesta)
@@ -68,7 +68,7 @@ namespace programacionexamennoviembre.clases
                 }
                 else
                 {
-                    for (int fila = 0; fila<DT.Rows.Count; fila++)
+                    for (int fila = 0; fila < DT.Rows.Count; fila++)
                     {
                         if (Convert.ToInt32(DT.Rows[fila]["Id"]) == integrantes.id)
                         {
@@ -84,9 +84,22 @@ namespace programacionexamennoviembre.clases
             }
             return respuesta;
         }
-	
-	}
-	       
+        public bool DeleteIntegrantes(Integrantes integrantes)
+        {
+            bool ingre = false;
+            for (int fila = 0; fila < DT.Rows.Count; fila++)
+            {
+                if (Convert.ToInt32(DT.Rows[fila]["Id"]) == integrantes.id)
+                {
+                    DT.Rows[fila].Delete();
+                    DT.WriteXml("lista.xml");
+                    ingre = true;
+                    break;
+                }
+            }
+            return ingre;
+        }
+    }
 }
         
 
