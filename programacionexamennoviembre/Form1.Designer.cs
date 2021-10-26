@@ -45,6 +45,7 @@ namespace programacionexamennoviembre
             this.txtedad = new System.Windows.Forms.TextBox();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Bsalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,12 +199,23 @@ namespace programacionexamennoviembre
             this.dgv.TabIndex = 15;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Bsalir
+            // 
+            this.Bsalir.Location = new System.Drawing.Point(1069, 383);
+            this.Bsalir.Name = "Bsalir";
+            this.Bsalir.Size = new System.Drawing.Size(124, 36);
+            this.Bsalir.TabIndex = 16;
+            this.Bsalir.Text = "SALIR";
+            this.Bsalir.UseVisualStyleBackColor = true;
+            this.Bsalir.Click += new System.EventHandler(this.Bsalir_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1333, 692);
+            this.Controls.Add(this.Bsalir);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.txtcorreo);
             this.Controls.Add(this.txtedad);
@@ -247,6 +259,7 @@ namespace programacionexamennoviembre
         private System.Windows.Forms.TextBox txtedad;
         private System.Windows.Forms.TextBox txtcorreo;
         private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.Button Bsalir;
     }
 }
 
