@@ -42,13 +42,13 @@ namespace programacionexamennoviembre
             for (int i = 0; i <= 50; i++)
             {
                 
-                if (edad_usuario >= 18)
+                if (edad_usuario >= 18 && edad_usuario < 70)
                 {
                   
                        LBLresultado.Text = "PUEDE INGRESAR A LA CAPACITACION...";
                     
                 }
-                else if (edad_usuario >=1 && edad_usuario <18)
+                else 
                 {
                     LBLresultado.Text = "NO PUEDE INGRESAR A LA CAPACITACION...CONTINUE";
                 }

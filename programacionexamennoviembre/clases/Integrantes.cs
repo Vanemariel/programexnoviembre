@@ -13,6 +13,7 @@ namespace programacionexamennoviembre
         public string Apellido { get; set; }
         public string Correo { get; set; }
         public int edad { get; set; }
+       
 
 
         public bool Validar()
